@@ -16,10 +16,10 @@ export const loginAction = async (formData: FormData) => {
     );
     const user: UserType = response.data[0];
     if (!user) throw new Error("Invalid Credentials");
-    redirect("/contact")
   } catch (error) {
     throw new Error("Failed to login");
   }
+  redirect("/contact")
 };
 
 export const logout = async() => {
