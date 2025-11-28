@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { UserType } from "../_data/_types/user";
+import { UserType } from "../_types/user";
 
 export const setSession = async (user: UserType) => {
   (await cookies()).set("session", JSON.stringify(user), {

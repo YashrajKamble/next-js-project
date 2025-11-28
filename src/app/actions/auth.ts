@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import { redirect } from "next/navigation";
-import { UserType } from "../_data/_types/user";
+import { UserType } from "../_types/user";
 import { deleteSession, setSession } from "../_lib/session";
 
 const API_URL = "http://localhost:3001";
