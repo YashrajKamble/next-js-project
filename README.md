@@ -130,11 +130,4 @@ src/
 2. Include screenshots or screen recordings for UI-facing changes.
 3. Run `npm run lint` plus smoke-test `npm run dev` + `npm run server` before pushing.
 
----
 
-## 📄 License
-No explicit license yet. Add one (MIT, Apache-2.0, etc.) before distributing broadly.
-
----
-
-Happy building! 🚀 Let us know what you craft on top of this Contact Manager. 😊
