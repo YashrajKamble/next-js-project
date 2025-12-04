@@ -15,11 +15,32 @@ export const loginAction = async (formData: FormData) => {
         "password"
       )}`
     );
+
     const user: UserType = response.data[0];
+
     if (!user) throw new Error("Invalid Credentials");
     await setSession({ name: user.name, email: user.email, id: user.id });
   } catch (error) {
     throw new Error("Failed to login");
+  }
+  redirect("/contact");
+};
+
+export const registerAction = async (formData: FormData) => {
+  console.log("formData:", formData);
+
+  try {
+    const createResponse = await axios.post(`${API_URL}/users`, {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      password: formData.get("password"),
+    });
+
+    const user: UserType = createResponse.data;
+
+    await setSession({ name: user.name, email: user.email, id: user.id });
+  } catch (error) {
+    throw new Error("Failed to register");
   }
   redirect("/contact");
 };

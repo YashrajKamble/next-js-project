@@ -1,0 +1,53 @@
+"use client";
+
+import { registerAction } from "../actions/auth";
+
+const RegisterForm = () => {
+    return (
+        <form action={registerAction} className="space-x-4">
+            <div>
+                <label className="block text-sm font-medium text-gray-700">Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your Name here"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:right-blue-500 sm:text-sm p-2"
+                />
+            </div>
+
+            <div className="mt-3">
+                <label className="block text-sm font-medium text-gray-700">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your Email Id here"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:right-blue-500 sm:text-sm p-2"
+                />
+            </div>
+
+            <div className="mt-3">
+                <label className="block text-sm font-medium text-gray-700">
+                    Password
+                </label>
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password here"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:right-blue-500 sm:text-sm p-2"
+                />
+            </div>
+
+            <button
+                type="submit"
+                className="w-full flex justify-center py-2 px-2 border border-transparent rounded-sm shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-600 focus:outline mt-3"
+            >
+                Register
+            </button>
+        </form>
+    );
+};
+
+export default RegisterForm;

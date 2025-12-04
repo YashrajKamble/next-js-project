@@ -13,7 +13,7 @@ const DeleteButton = ({ action, contact }: DeleteButtonProps) => {
   const [state, formAction] = useActionState(action, null);
 
   return (
-    <form action={formAction} method="post">
+    <form action={formAction}>
       <input type="hidden" name="id" value={contact?.id} />
 
       <button
