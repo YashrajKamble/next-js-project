@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -23,6 +24,10 @@ const Home = () => {
         <p className="mt-2 text-lg font-bold">
           start managing your contacts today!
         </p>
+
+        <Link href="/login" className="mt-20 text-lg font-bold hover:underline cursor-pointer text-blue-600 hover:text-blue-800">
+          Log in or registering an account.
+        </Link>
       </div>
     </div>
   );

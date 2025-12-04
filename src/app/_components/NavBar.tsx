@@ -22,12 +22,12 @@ const NavBar = async () => {
             </>
           ) : (
             <>
-              <Link href="/login" className="mr-5 hover:text-blue-800">
+              {/* <Link href="/login" className="mr-5 hover:text-blue-800">
                 Login
               </Link>
               <Link href="/register" className="hover:text-blue-600">
                 Register
-              </Link>
+              </Link> */}
             </>
           )}
         </div>
